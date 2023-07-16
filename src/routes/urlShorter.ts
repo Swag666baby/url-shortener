@@ -4,11 +4,11 @@ import alphanumericCode from "../utils/alphanumericCode";
 const router = Router();
 
 router.post("/shorter", (request, response) => {
-  //  try{
+    try{
         response.send(urlShorter(request.body.url))
-   // }catch{
-   //     response.send({"error": 500});
-   // }
+    }catch{
+        response.send({"error": 500});
+    }
 });
 
 router.get("/:alphanumericCode", (req, res) => {
