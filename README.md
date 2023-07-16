@@ -19,7 +19,7 @@ node src/server
 ```
 
 
-# example of use 
+### example of use 
 ```javascript 
 const axios = require("axios");
 async function shortener(){
