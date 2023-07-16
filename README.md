@@ -23,7 +23,7 @@ node src/server
 ```javascript 
 const axios = require("axios");
 async function shortener(){
-    const request = await axios.post("http://localhost:3000/shorter", {"url": "xnxx.com"})
+    const request = await axios.post("http://localhost:3000/shorter", {"url": "github.com"})
     console.log(request.data)
 }
 shortener()
