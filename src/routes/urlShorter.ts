@@ -1,11 +1,11 @@
 import {Router} from "express";
-import {urlShorter, redirectToUrl} from "../controllers/urlShorter_controller";
-import alphanumericCode from "../utils/alphanumericCode";
+import {urlShortener} from "../controllers/urlShortener";
+import {redirectToUrl} from "../controllers/redirectToUrl";
 const router = Router();
 
 router.post("/shorter", (request, response) => {
     try{
-        response.send(urlShorter(request.body.url))
+        response.send(urlShortener(request.body.url, request.get("host")))
     }catch{
         response.send({"error": 500});
     }
