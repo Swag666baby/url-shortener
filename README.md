@@ -13,9 +13,9 @@ cd url-shortener
 
 **• running**
 ```bash
-npm install
-tsc src/server
-node src/server
+yarn
+tsc
+node dist/server
 ```
 
 
@@ -23,7 +23,7 @@ node src/server
 ```javascript 
 const axios = require("axios");
 async function shortener(){
-    const request = await axios.post("http://localhost:3000/shorter", {"url": "github.com"})
+    const request = await axios.post("http://localhost:3000/shorter", {"url": "https://github.com"})
     console.log(request.data)
 }
 shortener()
